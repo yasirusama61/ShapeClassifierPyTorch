@@ -35,6 +35,7 @@ Flatten → FC → ReLU → FC (3 outputs)
 
 ## 📂 Folder Structure
 
+```
 ShapeClassifierPyTorch/
 ├── Shape_Classifier.ipynb         # 📓 Main notebook for training and evaluation
 ├── requirements.txt               # 📦 Dependencies for pip install
@@ -47,6 +48,7 @@ ShapeClassifierPyTorch/
 │       ├── square/
 │       └── triangle/
 └── saved_models/                  # 💾 (Optional) model checkpoints
+```
 
 ## 🖼️ Sample Dataset Visualization
 
