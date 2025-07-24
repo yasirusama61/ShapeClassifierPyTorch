@@ -103,3 +103,15 @@ Below are example predictions from our trained shape classification model. Each 
 ![Sample Predictions](images/predictions_sample.png)
 
 All predictions in this batch were correctly classified, demonstrating the model’s ability to generalize to unseen samples from the test set.
+
+---
+
+## 🌀 Fixed Length, Random Rotation
+
+In this dataset variant, all geometric shapes maintain a **constant size**, but each shape is assigned a **random rotation angle** between 0° and 360°. This variation helps the model learn **rotation-invariant features** for better generalization.
+
+### 🖼️ Sample Images
+
+Below are random samples from each shape class in the `fixed_length_random_rotation` dataset:
+
+![Fixed Rotation](images/fixed_length_random_rotation_samples.png)
