@@ -161,3 +161,25 @@ Below are random samples from each class in the `random_length_fixed_rotation` d
 This visual confirms that the model must learn **scale-invariant** features, as shapes of different sizes appear throughout the dataset while maintaining orientation.
 
 ---
+
+### 📈 Training and Validation Loss
+
+The model converged smoothly over 20 epochs:
+
+<p align="center">
+  <img src="images/random_length_fixed_rotation_loss.png" alt="Loss Curve" width="600">
+</p>
+
+---
+
+### 🎯 Test Predictions
+
+Below are example predictions from the test set. All shapes were correctly classified, despite size variations:
+
+<p align="center">
+  <img src="images/random_length_fixed_rotation_preds.png" alt="Test Predictions" width="90%">
+</p>
+
+---
+
+The results show that the model successfully learned **scale-invariant features** under fixed orientation, maintaining 100% classification accuracy across all classes.
