@@ -78,3 +78,17 @@ Using device: cuda
 
 
 The model reached **100% accuracy on both training and validation** within 2 epochs and maintained it across all 15, showing perfect generalization under this condition.
+
+### 📈 Loss Curve
+
+Below is the training and validation loss plotted over all epochs:
+
+<img src="images/loss_curve_fixed_fixed.png" width="600"/>
+
+### 🔍 Sample Predictions
+
+Below are example predictions from our trained shape classification model. Each subplot shows the **ground truth (GT)** label and the **predicted (Pred)** label for a synthetic shape image.
+
+![Sample Predictions](images/predictions_sample.png)
+
+All predictions in this batch were correctly classified, demonstrating the model’s ability to generalize to unseen samples from the test set.
