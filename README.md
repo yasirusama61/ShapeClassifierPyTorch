@@ -183,3 +183,30 @@ Below are example predictions from the test set. All shapes were correctly class
 ---
 
 The results show that the model successfully learned **scale-invariant features** under fixed orientation, maintaining 100% classification accuracy across all classes.
+
+## 🔄 Random Length + Random Rotation
+
+This is the most complex dataset variant. Each shape varies in both:
+- **Size** (length/radius between 20–50 px)
+- **Rotation** (angle randomly chosen from 0°–360°)
+
+This setting tests the model’s ability to learn both **scale-invariant** and **rotation-invariant** features simultaneously.
+
+### ⚙️ Characteristics
+- Random size and orientation per sample
+- Balanced: 500 samples per class
+- Image resolution: 128×128 px
+
+---
+
+### 🖼️ Sample Images
+
+Below is a random selection of images from the `random_length_random_rotation` dataset:
+
+<p align="center">
+  <img src="images/random_length_random_rotation_samples.png" alt="Random Length + Random Rotation Samples" width="90%">
+</p>
+
+---
+
+This setup provides a realistic challenge for shape recognition systems and serves as a test of true generalization across geometric transformations.
