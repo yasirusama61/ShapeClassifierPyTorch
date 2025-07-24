@@ -80,13 +80,13 @@ The model was trained for 15 epochs using the Fixed Length + Fixed Rotation data
 **Epochs:** 15
 
 **Training Summary:**
-
+```
 Using device: cuda
 [Epoch 1/15] Train Loss: 0.3529 | Val Loss: 0.0000 | Val Acc: 100.00%
 [Epoch 2/15] Train Loss: 0.0000 | Val Loss: 0.0000 | Val Acc: 100.00%
 ...
 [Epoch 15/15] Train Loss: 0.0000 | Val Loss: 0.0000 | Val Acc: 100.00%
-
+```
 
 The model reached **100% accuracy on both training and validation** within 2 epochs and maintained it across all 15, showing perfect generalization under this condition.
 
