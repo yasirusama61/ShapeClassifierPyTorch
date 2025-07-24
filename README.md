@@ -115,3 +115,27 @@ In this dataset variant, all geometric shapes maintain a **constant size**, but 
 Below are random samples from each shape class in the `fixed_length_random_rotation` dataset:
 
 ![Fixed Rotation](images/fixed_length_random_rotation_samples.png)
+
+### ✅ Results: Fixed Length + Random Rotation
+
+The model was trained on the `fixed_length_random_rotation` dataset using the same CNN architecture. All shapes were of fixed size, but randomly rotated. The model demonstrated excellent rotation-invariant classification ability.
+
+**Test Accuracy:** `100.00% (225/225)`  
+**Per-Class Accuracy:**
+- Circle: 100% (73/73)
+- Square: 100% (81/81)
+- Triangle: 100% (71/71)
+
+### 🔍 Predictions Visualization
+
+Below is a batch of test predictions showing perfect performance. Each image includes:
+- **T**: True label
+- **P**: Predicted label
+
+<p align="center">
+  <img src="images/fixed_length_random_rotation_preds.png" alt="Fixed Rotation Predictions" width="90%">
+</p>
+
+---
+
+We observed that the model generalized well to rotated versions of shapes even though trained only on fixed-size inputs, suggesting robustness to geometric transformations. Further experiments will explore variable-length and noise-augmented datasets.
