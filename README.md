@@ -139,3 +139,25 @@ Below is a batch of test predictions showing perfect performance. Each image inc
 ---
 
 We observed that the model generalized well to rotated versions of shapes even though trained only on fixed-size inputs, suggesting robustness to geometric transformations. Further experiments will explore variable-length and noise-augmented datasets.
+
+## 🧪 Random Length + Fixed Rotation
+
+In this experimental condition, each geometric shape (Circle, Square, Triangle) is generated with a **random size**, but the **rotation angle is fixed** across all samples (e.g., 45°). This setup evaluates the model’s ability to generalize across different scales while preserving a consistent orientation.
+
+### ⚙️ Characteristics
+- **Length (size):** Randomized per image (range: 20–50 pixels)
+- **Rotation:** Fixed (e.g., 45°)
+- **Total samples per class:** 500 (balanced)
+- **Image size:** 128×128 px
+
+### 🖼️ Sample Images
+
+Below are random samples from each class in the `random_length_fixed_rotation` dataset:
+
+<p align="center">
+  <img src="images/random_length_fixed_rotation_samples.png" alt="Random Length + Fixed Rotation Samples" width="90%">
+</p>
+
+This visual confirms that the model must learn **scale-invariant** features, as shapes of different sizes appear throughout the dataset while maintaining orientation.
+
+---
