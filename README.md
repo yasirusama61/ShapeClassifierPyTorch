@@ -1,6 +1,15 @@
 # 🟢 Shape Classifier (PyTorch)
 
-This project demonstrates the training and evaluation of a simple CNN-based vision model to classify geometric shapes — **Circle**, **Square**, and **Triangle** — using synthetic data generated with the Python PIL library.
+[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.13.1-%23EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen)]()
+
+---
+
+This project demonstrates the training and evaluation of a simple **CNN-based vision model** to classify geometric shapes — **Circle**, **Square**, and **Triangle** — using synthetic data generated with the Python `PIL` library.
+
+The goal is to provide a clean, minimal baseline for beginners exploring deep learning in computer vision, especially with synthetic datasets.
 
 ---
 
