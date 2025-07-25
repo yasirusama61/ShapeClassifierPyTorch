@@ -45,7 +45,7 @@ Conv2d → ReLU → MaxPool
 Conv2d → ReLU → MaxPool  
 Conv2d → ReLU → AdaptiveAvgPool  
 Flatten → FC (3 outputs)
-
+```
 ## 📂 Folder Structure
 
 ```
