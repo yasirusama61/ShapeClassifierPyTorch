@@ -277,7 +277,7 @@ Below is the confusion matrix for the test set. Only a single triangle was miscl
 
 You're waiting at baggage claim after a flight. Your luggage hasn't arrived in the first few minutes. How much longer might you have to wait?
 
-### 🧠 Assumptions
+###  Assumptions
 
 - Your luggage is **either** still on the plane (`S = 1`) or already unloaded (`S = 0`)
 - Initial belief: `P(S = 1) = 0.5`
@@ -285,17 +285,57 @@ You're waiting at baggage claim after a flight. Your luggage hasn't arrived in t
   `P(seen by time t | S = 0) = t / 10`
 - All luggage is definitely delivered by **t = 10 minutes**
 
-
 ---
 
 ### ✅ A. What is the probability the luggage is still on the airplane after 5 minutes?
 
-Using Bayes' theorem:  
-`P(S = 1 | not seen by t) = 0.5 / (1 - t/20)`
+We want to compute the conditional probability:  
+**`P(S = 1 | not seen by time t)`**  
+That is, what's the chance that the luggage is still on the airplane **given that we haven't seen it by time `t`**?
 
-At `t = 5`:  
-`P(S = 1 | not seen by 5) = 0.5 / (1 - 5/20) = 0.5 / 0.75 = 0.6667 = 66.7%`
+---
 
+#### 🔍 Step 1: Define Events
+
+- Let `S = 1` → luggage is **still on the plane**  
+- Let `S = 0` → luggage is **already unloaded**  
+- Let `E` = "not seen by time t"
+
+---
+
+#### 📘 Step 2: Apply Bayes’ Theorem
+
+``P(S = 1 | E) = [P(E | S = 1) * P(S = 1)] / [P(E | S = 1) * P(S = 1) + P(E | S = 0) * P(S = 0)]``
+
+---
+
+#### 🧠 Step 3: Use Given Assumptions
+
+- Prior:  
+  ``P(S = 1) = P(S = 0) = 0.5``
+
+- If still on the plane:  
+  ``P(E | S = 1) = 1``
+
+- If already unloaded:  
+  ``P(seen by time t | S = 0) = t / 10``  
+  ``⇒ P(E | S = 0) = 1 - t / 10``
+
+---
+
+#### 🧮 Step 4: Plug into Bayes’ Formula
+
+``P(S = 1 | E) = [1 * 0.5] / [1 * 0.5 + (1 - t/10) * 0.5]``  
+``= 0.5 / [0.5 + 0.5(1 - t/10)]``  
+``= 0.5 / (1 - t/20)``
+
+---
+
+#### 🧾 Step 5: Final Answer at t = 5
+
+``P(S = 1 | not seen by t = 5) = 0.5 / (1 - 5/20) = 0.5 / 0.75 = 0.6667``
+
+So, **there is a 66.7% chance the luggage is still on the airplane** after 5 minutes of waiting.
 
 ---
 
