@@ -106,6 +106,12 @@ All predictions in this batch were correctly classified, demonstrating the model
 
 ---
 
+### 📊 Confusion Matrix
+
+<p align="center">
+  <img src="images/fixed_length_fixed_rotation_confusion.png" alt="Confusion Matrix" width="400">
+</p>
+
 ## 🌀 Fixed Length, Random Rotation
 
 In this dataset variant, all geometric shapes maintain a **constant size**, but each shape is assigned a **random rotation angle** between 0° and 360°. This variation helps the model learn **rotation-invariant features** for better generalization.
