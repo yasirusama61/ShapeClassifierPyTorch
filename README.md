@@ -16,31 +16,35 @@ The goal is to provide a clean, minimal baseline for beginners exploring deep le
 ## 📌 Task Objective
 
 Develop a basic shape classifier under different synthetic conditions:
-- Fixed Length, Fixed Rotation ✅
-- Fixed Length, Random Rotation ⏳
-- Random Length, Fixed Rotation ⏳
-- Random Length, Random Rotation ⏳
+- ✅ Fixed Length, Fixed Rotation
+- ✅ Fixed Length, Random Rotation
+- ✅ Random Length, Fixed Rotation
+- ✅ Random Length, Random Rotation
 
 ---
 
-## 🧪 Current Status
-| Condition Type | Implemented | Accuracy |
-|----------------|-------------|----------|
-| Fixed Length + Fixed Rotation | ✅ Done | 100% (Train / Val / Test) |
+## 🧪 Experimental Results
+
+| Condition Type                   | Accuracy | Notes                                  |
+|----------------------------------|----------|----------------------------------------|
+| Fixed Length + Fixed Rotation    | 100%     | Achieved perfect classification        |
+| Fixed Length + Random Rotation   | 99.56%   | Only 1 sample misclassified (Triangle) |
+| Random Length + Fixed Rotation   | 98.67%   | Robust despite length variation        |
+| Random Length + Random Rotation | 98.22%   | Most challenging; still high accuracy  |
+
+Confusion matrices, prediction visualizations, and evaluation metrics are included in the `notebooks/` and shown in the [README](#confusion-matrix-results).
 
 ---
 
 ## 🧠 Model Summary
 
-A simple CNN with 3 convolutional layers and 2 fully connected layers is used. It efficiently classifies synthetic shapes under the fixed size + rotation condition with 100% accuracy.
+A simple CNN with 3 convolutional layers and 1 fully connected layer:
 
 ```python
 Conv2d → ReLU → MaxPool  
 Conv2d → ReLU → MaxPool  
-Conv2d → ReLU → MaxPool  
-Flatten → FC → ReLU → FC (3 outputs)
-```
----
+Conv2d → ReLU → AdaptiveAvgPool  
+Flatten → FC (3 outputs)
 
 ## 📂 Folder Structure
 
