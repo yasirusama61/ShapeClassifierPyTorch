@@ -246,3 +246,4 @@ This is the most challenging dataset variant, where each shape varies in **size*
 | Accuracy      | 100.00% (77/77) | 100.00% (70/70) | 98.72% (77/78) | **99.56%** (224/225) |
 
 Despite combined shape variation in both size and orientation, the model achieved near-perfect accuracy across all classes. Only one Triangle sample was misclassified, demonstrating excellent generalization capability.
+
