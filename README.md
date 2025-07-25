@@ -247,3 +247,10 @@ This is the most challenging dataset variant, where each shape varies in **size*
 
 Despite combined shape variation in both size and orientation, the model achieved near-perfect accuracy across all classes. Only one Triangle sample was misclassified, demonstrating excellent generalization capability.
 
+### 📊 Confusion Matrix
+
+Below is the confusion matrix for the test set. Only a single triangle was misclassified, indicating strong class separation:
+
+<p align="center">
+  <img src="images/random_length_random_rotation_confusion.png" alt="Confusion Matrix" width="400">
+</p>
