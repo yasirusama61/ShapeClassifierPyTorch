@@ -356,3 +356,58 @@ Below is a plot of the probability over time:
 If 10 minutes is the maximum wait time and your bag hasn’t appeared by 5 minutes, there's a **66.7%** chance it hasn’t been unloaded yet. The longer you wait, the more likely it's **still on the plane**.
 
 This is a classic real-world example of applying **Bayesian reasoning** with a linear likelihood.
+
+### 🧠 Bonus 2: Simpson’s Paradox in Clinical Studies
+
+In this task, we explore a clinical scenario where the effectiveness of a drug appears to reverse depending on whether we control for gender. This is a classic example of **Simpson’s Paradox**.
+
+#### 💊 Scenario:
+
+|                 | Control Group (No Medication)     | Treatment Group (Medication)     |
+|-----------------|-----------------------------------|----------------------------------|
+| **Male**        | Disease = 0: 19<br>Disease = 1: 1 | Disease = 0: 37<br>Disease = 1: 3 |
+| **Female**      | Disease = 0: 28<br>Disease = 1: 12 | Disease = 0: 12<br>Disease = 1: 8 |
+| **Total**       | Disease = 0: 47<br>Disease = 1: 13 | Disease = 0: 49<br>Disease = 1: 11 |
+
+---
+
+### ✅ A. Gender as a Confounder
+
+We compute recovery rates within each gender group to remove confounding:
+
+- **Male (Control)**: `19 / (19 + 1) = 95.0%`  
+- **Male (Treatment)**: `37 / (37 + 3) = 92.5%`  
+→ Treatment **worse** for males
+
+- **Female (Control)**: `28 / (28 + 12) = 70.0%`  
+- **Female (Treatment)**: `12 / (12 + 8) = 60.0%`  
+→ Treatment **worse** for females
+
+**Conclusion**: When controlling for gender, the drug appears to be less effective in both subgroups.
+
+---
+
+### ✅ B. Gender as a Mediator
+
+Now assume drug changes gender, which affects disease outcome:
+
+- **Overall Control Group**: `47 / (47 + 13) = 78.3%`  
+- **Overall Treatment Group**: `49 / (49 + 11) = 81.7%`
+
+**Conclusion**: The drug appears beneficial overall **without** controlling for gender.
+
+---
+
+### ⚖️ C. Are the Results Different?
+
+Yes, they are. This is Simpson’s Paradox in action:
+
+- Under **Assumption A** (gender is a confounder), treatment looks harmful.
+- Under **Assumption B** (gender is a mediator), treatment looks helpful.
+
+In real-world clinical settings, **Assumption A is more plausible**, as gender is a biological attribute and not altered by medication. Therefore, we **should trust the stratified analysis**, which reveals the treatment is actually less effective when confounding is accounted for.
+
+---
+
+**📌 Key Insight:**  
+Simpson’s Paradox warns us that **aggregated data can be misleading** when there are lurking confounders like gender.
