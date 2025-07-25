@@ -293,15 +293,14 @@ You're waiting at baggage claim after a flight. Your luggage hasn't arrived in t
 
 ### ✅ A. What is the probability the luggage is still on the airplane after 5 minutes?
 
-Using Bayes' theorem:
-\[
-P(S = 1 \mid \text{not seen by } t) = \frac{0.5}{1 - \frac{t}{20}}
-\]
+### ✅ A. What is the probability the luggage is still on the airplane after 5 minutes?
 
-At \( t = 5 \):
-\[
-P(S = 1 \mid \text{not seen by 5}) = \frac{0.5}{1 - \frac{5}{20}} = \frac{0.5}{0.75} = \frac{2}{3} \approx 66.7\%
-\]
+Using Bayes' theorem:  
+`P(S = 1 | not seen by t) = 0.5 / (1 - t/20)`
+
+At `t = 5`:  
+`P(S = 1 | not seen by 5) = 0.5 / (1 - 5/20) = 0.5 / 0.75 = 0.6667 = 66.7%`
+
 
 ---
 
