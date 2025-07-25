@@ -210,3 +210,39 @@ Below is a random selection of images from the `random_length_random_rotation` d
 ---
 
 This setup provides a realistic challenge for shape recognition systems and serves as a test of true generalization across geometric transformations.
+
+## 🌀 Random Length + Random Rotation
+
+This is the most challenging dataset variant, where each shape varies in **size** and **rotation angle**. It closely simulates real-world geometric variability and tests the model’s ability to generalize under both transformations.
+
+### ⚙️ Characteristics
+- Random shape size per image (range: 20–50 px)
+- Random rotation angle (0–360°)
+- 500 samples per class
+- Image size: 128 × 128 px
+
+---
+
+### 📉 Training and Validation Loss
+
+<p align="center">
+  <img src="images/random_length_random_rotation_loss.png" alt="Loss Curve" width="600">
+</p>
+
+---
+
+### 🖼️ Test Predictions
+
+<p align="center">
+  <img src="images/random_length_random_rotation_preds.png" alt="Test Predictions" width="90%">
+</p>
+
+---
+
+### 🎯 Evaluation Results
+
+| Metric        | Circle | Square | Triangle | Overall |
+|---------------|--------|--------|----------|---------|
+| Accuracy      | 100.00% (77/77) | 100.00% (70/70) | 98.72% (77/78) | **99.56%** (224/225) |
+
+Despite combined shape variation in both size and orientation, the model achieved near-perfect accuracy across all classes. Only one Triangle sample was misclassified, demonstrating excellent generalization capability.
