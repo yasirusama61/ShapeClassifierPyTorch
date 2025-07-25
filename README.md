@@ -272,3 +272,53 @@ Below is the confusion matrix for the test set. Only a single triangle was miscl
 <p align="center">
   <img src="images/random_length_random_rotation_confusion.png" alt="Confusion Matrix" width="400">
 </p>
+
+## 🎁 Bonus 1: The Problem of Waiting for My Luggage
+
+You're waiting at baggage claim after a flight. Your luggage hasn't arrived in the first few minutes. How much longer might you have to wait?
+
+### 🧠 Assumptions
+- Your luggage is **either** still on the plane (`S = 1`) or already unloaded (`S = 0`)
+- Initial belief:  
+  \[
+  P(S = 1) = 0.5
+  \]
+- If luggage is unloaded (`S = 0`), the chance of seeing it increases **linearly** over time:
+  \[
+  P(\text{seen by time } t \mid S = 0) = \frac{t}{10}
+  \]
+- All luggage is definitely delivered by **t = 10 minutes**
+
+---
+
+### ✅ A. What is the probability the luggage is still on the airplane after 5 minutes?
+
+Using Bayes' theorem:
+\[
+P(S = 1 \mid \text{not seen by } t) = \frac{0.5}{1 - \frac{t}{20}}
+\]
+
+At \( t = 5 \):
+\[
+P(S = 1 \mid \text{not seen by 5}) = \frac{0.5}{1 - \frac{5}{20}} = \frac{0.5}{0.75} = \frac{2}{3} \approx 66.7\%
+\]
+
+---
+
+### 📈 B. Probability Over Time
+
+As time passes and your luggage still doesn’t arrive, the conditional probability that it is **still on the plane** increases.
+
+Below is a plot of the probability over time:
+
+<p align="center">
+  <img src="images/luggage_waiting_probability.png" alt="Luggage Conditional Probability Over Time" width="600">
+</p>
+
+---
+
+### 📌 Insight
+
+If 10 minutes is the maximum wait time and your bag hasn’t appeared by 5 minutes, there's a **66.7%** chance it hasn’t been unloaded yet. The longer you wait, the more likely it's **still on the plane**.
+
+This is a classic real-world example of applying **Bayesian reasoning** with a linear likelihood.
