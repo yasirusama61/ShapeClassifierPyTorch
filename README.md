@@ -146,6 +146,12 @@ Below is a batch of test predictions showing perfect performance. Each image inc
 
 We observed that the model generalized well to rotated versions of shapes even though trained only on fixed-size inputs, suggesting robustness to geometric transformations. Further experiments will explore variable-length and noise-augmented datasets.
 
+### 📊 Confusion Matrix
+
+<p align="center">
+  <img src="images/fixed_length_random_rotation_confusion.png" alt="Confusion Matrix" width="400">
+</p>
+
 ## 🧪 Random Length + Fixed Rotation
 
 In this experimental condition, each geometric shape (Circle, Square, Triangle) is generated with a **random size**, but the **rotation angle is fixed** across all samples (e.g., 45°). This setup evaluates the model’s ability to generalize across different scales while preserving a consistent orientation.
