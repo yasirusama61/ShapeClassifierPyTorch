@@ -196,6 +196,12 @@ Below are example predictions from the test set. All shapes were correctly class
 
 The results show that the model successfully learned **scale-invariant features** under fixed orientation, maintaining 100% classification accuracy across all classes.
 
+### 📊 Confusion Matrix
+
+<p align="center">
+  <img src="images/random_length_fixed_rotation_confusion.png" alt="Confusion Matrix" width="400">
+</p>
+
 ## 🔄 Random Length + Random Rotation
 
 This is the most complex dataset variant. Each shape varies in both:
