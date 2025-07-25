@@ -273,25 +273,20 @@ Below is the confusion matrix for the test set. Only a single triangle was miscl
   <img src="images/random_length_random_rotation_confusion.png" alt="Confusion Matrix" width="400">
 </p>
 
-## 🎁 Bonus 1: The Problem of Waiting for My Luggage
+##  Bonus 1: The Problem of Waiting for My Luggage
 
 You're waiting at baggage claim after a flight. Your luggage hasn't arrived in the first few minutes. How much longer might you have to wait?
 
 ### 🧠 Assumptions
+
 - Your luggage is **either** still on the plane (`S = 1`) or already unloaded (`S = 0`)
-- Initial belief:  
-  \[
-  P(S = 1) = 0.5
-  \]
-- If luggage is unloaded (`S = 0`), the chance of seeing it increases **linearly** over time:
-  \[
-  P(\text{seen by time } t \mid S = 0) = \frac{t}{10}
-  \]
+- Initial belief: `P(S = 1) = 0.5`
+- If the luggage is unloaded (`S = 0`), the chance of seeing it increases **linearly** over time:
+  `P(seen by time t | S = 0) = t / 10`
 - All luggage is definitely delivered by **t = 10 minutes**
 
----
 
-### ✅ A. What is the probability the luggage is still on the airplane after 5 minutes?
+---
 
 ### ✅ A. What is the probability the luggage is still on the airplane after 5 minutes?
 
